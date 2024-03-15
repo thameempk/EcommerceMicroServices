@@ -1,0 +1,15 @@
+version: '3.4'
+
+services:
+  productmanagement:
+    image: ${DOCKER_REGISTRY-}productmanagement
+    build:
+      context: .
+      dockerfile: ProductManagement/Dockerfile
+
+  usermanagement:
+    image: ${DOCKER_REGISTRY-}usermanagement
+    build:
+      context: .
+      dockerfile: UserManagement/Dockerfile
+
